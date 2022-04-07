@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./vue.js"></script>
+    <title>Vue-Iniciando</title>
+</head>
+
+<body>
+    <h1>Vue.js Iniciando</h1>
+
+  <!--  <div id="app">
+        {{ mensagem }} <br>
+        Valor Total: {{ valorTotal }}<br>
+        Logado: {{ logado }}<br>
+        Hobbies: {{hobbies[1]}}--{{hobbies[0]}}<br>
+        Perfil: {{ perfil.site }}--{{ perfil.cursos[0].nome }}
+
+    </div>--> 
+
+    <div id="app">
+       methods somar:   {{ somar() }} <br>
+       methods subtrair:   {{ subtrair() }} <br>
+       methods multiplicar:   {{ multiplicar() }} <br>
+       methods dividir:   {{ dividir() }} <br>
+
+
+    </div>
+    <script>
+
+        //  options = { 
+        //     el: '#app', //# para selcionar id e . para selecioar pela class
+        //     data: { //variaveis/atributos reativos
+        //         mensagem : 'Primeiro template controlado pelo Vue'
+        //     }
+        // }
+     /* 
+     const vm = new Vue({
+            el: '#app', //# para selcionar id e . para selecioar pela class
+            data: { //variaveis/atributos reativos
+                mensagem: 'Primeiro template controlado pelo Vue', // propriedade que contem uma string
+                valorTotal: 150,
+                logado: false,
+                hobbies: [
+                    'Dormir',
+                    'correr',
+                    'andar de moto'
+                ],
+                perfil: {
+                    nome: 'Leandro dos Santos',
+                    site: 'wwww.estudando.com.br',
+                    idade: 39,
+                    cursos: [
+                        { nome: 'laravel', CargaHoraria: '50 horas' },
+                        { nome: 'Banco de dados', CargaHoraria: '40 horas' }
+                    ]
+                }
+            }
+        });
+
+     */   
+
+     const vm = new Vue({
+         el: '#app', 
+         data: {
+
+         },
+         methods: {
+            somar: function somar() {  //convencional
+                return 4+2;
+            },
+            subtrair: function(){  //anonima
+                return 9 -7 ;
+            },
+            multiplicar: () => {   //arrow function 
+                return 9 * 7 ;
+            },
+
+            dividir(){ //forma enxuta de definir os pares de chaves
+                return 4/2;
+            },
+            numeroAleatorio: function  numeroAleatorio(){ 
+                return Match.random();
+            }
+         }
+     });
+    </script>
+</body>
+
+</html>
